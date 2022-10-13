@@ -1,0 +1,91 @@
+Basic Python
+1. Split this string
+
+s = "Hi there Sam!"
+s.split(" ")
+output : ['Hi', 'there', 'Sam!']
+
+2. Use .format() to print the following string.
+Output should be: The diameter of Earth is 12742 kilometers.
+
+planet = "Earth"
+diameter = 12742
+"The diameter of {} is {} kilometers".format(planet,diameter)
+'The diameter of Earth is 12742 kilometers'
+
+Output : 'The diameter of Earth is 12742 kilometers'
+
+3. In this nest dictionary grab the word "hello"
+
+d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
+sh=d["k1"][3]["tricky"][3]["target"][3]
+print(sh)
+
+Numpy
+
+import numpy as np
+
+4.1 Create an array of 10 zeros?
+4.2 Create an array of 10 fives?
+array=np.zeros(10)
+print(array)
+
+output : [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+
+array=np.ones(10)*5
+print(array)
+
+output : [5. 5. 5. 5. 5. 5. 5. 5. 5. 5.]
+
+5. Create an array of all the even integers from 20 to 35
+even=np.arange(20,35,2)
+print(even)
+
+output : [20 22 24 26 28 30 32 34]
+
+6. Create a 3x3 matrix with values ranging from 0 to 8
+shape =  np.arange(0, 9).reshape(3,3)
+print(shape)
+
+output : [[0 1 2]
+ [3 4 5]
+ [6 7 8]]
+ 
+ 7. Concatenate a and b
+a = np.array([1, 2, 3]), b = np.array([4, 5, 6])
+a = np.array([1, 2,3])
+b = np.array([4,5, 6])
+np.concatenate((a, b))
+
+output : array([1, 2, 3, 4, 5, 6])
+
+Pandas
+8. Create a dataframe with 3 rows and 2 columns
+import pandas as pd
+A = np.random.randint(10, size=(3,2))
+df = pd.DataFrame(A,columns=['id1', 'id2'])
+df
+ouput : 
+id1	id2
+0	9	3
+1	8	9
+2	3	2
+
+9. Generate the series of dates from 1st Jan, 2023 to 10th Feb, 2023
+date = pd.date_range(start ='1-1-2023', 
+         end ='10-02-2023')
+  
+for val in date:
+    print(val)
+10. Create 2D list to DataFrame
+lists = [[1, 'aaa', 22], [2, 'bbb', 25], [3, 'ccc', 24]]
+
+lists = [[1, 'aaa', 22], [2, 'bbb', 25], [3, 'ccc', 24]]
+ls = pd.DataFrame(lists, columns =['mark1',"mark2","mark3"]) 
+ls
+output : 
+mark1	mark2	mark3
+0	1	aaa	22
+1	2	bbb	25
+2	3	ccc	24
+
